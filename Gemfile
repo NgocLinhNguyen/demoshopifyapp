@@ -64,4 +64,6 @@ end
 gem "execjs"
 gem "twitter-bootstrap-rails"
 gem "bootstrap-sass"
+gem 'shopify_api'
+
 
