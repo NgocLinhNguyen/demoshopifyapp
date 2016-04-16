@@ -14,9 +14,10 @@ Rails.application.routes.draw do
   resources :accounts
   get 'dashboard/index'
   root 'dashboard#index'
+  post "create_contest" => 'dashboard#create_contest'
   resources :accounts do
     member do
-    get 'test_connection'
+        get 'test_connection'
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
