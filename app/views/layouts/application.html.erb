@@ -63,6 +63,24 @@
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
+        <div class="row-fluid">
+          <% if content_for?(:sidebar) %>
+            <div class="span3">
+              <div class="well sidebar-nav">
+                <%= yield(:sidebar) %>
+              </div>
+            </div>
+            <div class="span9">
+              <%= bootstrap_flash %>
+              <%= yield %>
+            </div>
+          <% else %>
+            <div class="span12">
+              <%= bootstrap_flash %>
+              <%= yield %>
+            </div>
+          <% end %>
+        </div>
         <!-- <div class="col-lg-3">
           <div class="well sidebar-nav">
             <h3>Sidebar</h3>
