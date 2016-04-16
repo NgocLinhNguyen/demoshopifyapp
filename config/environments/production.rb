@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  SHOPIFY_API_KEY = ENV["SHOPIFY_API_KEY"]
+  SHOPIFY_SHARED_SECRET = ENV["SHOPIFY_SHARED_SECRET"]
+  DOMAIN = ENV["DOMAIN"]
 end

@@ -38,4 +38,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  SHOPIFY_API_KEY = "b24b5c44166dbfe4abe972e1f2d7847e"
+  SHOPIFY_SHARED_SECRET = "3e2f9e2ca11be493aa541c4146bc9c24-1460819212"
+  DOMAIN = "http://localhost:3000"
 end

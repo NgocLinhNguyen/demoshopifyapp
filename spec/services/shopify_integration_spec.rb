@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ShopifyIntegration do
+describe "shopifyIntegration" do
 
   context "initialize" do
     it "should raise exception if required parameters are not supplied" do
