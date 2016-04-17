@@ -1,4 +1,5 @@
 class Contest < ActiveRecord::Base
+  belongs_to :account
   belongs_to :order
   validates_presence_of :name
   def criteria

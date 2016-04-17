@@ -39,21 +39,25 @@
   <body>
 
     <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="brand" href="/">Contestapp</a>
-        <div class="container-fluid nav-collapse">
-          <ul class="nav">
-          <ul class="nav">
-          <li><%= link_to "Products", products_path %></li>
-          <li><%= link_to "Orders", orders_path %></li>
-          </ul>
-          </ul>
-          </div><!--/.nav-collapse -->
+        <div class="navbar navbar-fluid-top">
+          <div class="navbar-inner">
+            <% if logged_in? %>
+              <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+            <% end %>
+            <a class="brand" href="/">Contest App</a>
+            <% if logged_in? %>
+              <div class="container-fluid nav-collapse">
+                <ul class="nav">
+                  <li><%= link_to "Products", products_path %></li>
+                  <li><%= link_to "Orders", orders_path %></li>
+                  <li><%= link_to "Logout", sessions_destroy_path %></li>
+                </ul>
+              </div><!--/.nav-collapse -->
+            <% end %>
       </div>
     </div>
 
@@ -82,6 +86,7 @@
             </div>
           <% end %>
         </div>
+
         <!-- <div class="col-lg-3">
           <div class="well sidebar-nav">
             <h3>Sidebar</h3>

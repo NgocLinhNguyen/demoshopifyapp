@@ -52,12 +52,12 @@ RSpec.describe AccountsController, type: :controller do
     end
   end
 
-  describe "GET #new" do
-    it "assigns a new account as @account" do
-      get :new, {}, valid_session
-      expect(assigns(:account)).to be_a_new(Account)
-    end
-  end
+  # describe "GET #new" do
+  #   it "assigns a new account as @account" do
+  #     get :new, {}, valid_session
+  #     expect(assigns(:account)).to be_a_new(Account)
+  #   end
+  # end
 
   describe "GET #edit" do
     it "assigns the requested account as @account" do
